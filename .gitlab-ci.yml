@@ -1,0 +1,26 @@
+image: $DOCKER_REGISTRY_PREFIX/2smart/utils/combined-ci-image:latest
+
+services:
+  - name: $DOCKER_REGISTRY_PREFIX/2smart/standalone/services/emqx:release
+    alias: emqx-emqx
+
+variables:
+  EMQX_NAME: emqx_broker
+  EMQX_LISTENER__TCP__EXTERNAL: 1883
+  EMQX_LISTENER__WS__EXTERNAL: 8083
+  EMQX_ACL_NOMATCH: allow
+  EMQX_ACL_FILE: etc/empty.conf
+  ENV_MODE: 'test'
+
+before_script:
+  - npm ci
+
+lint:
+  stage: test
+  script:
+    - npm run test:lint
+
+test:
+  stage: test
+  script:
+    - npm run test:coverage
