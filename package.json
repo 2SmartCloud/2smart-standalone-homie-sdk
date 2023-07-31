@@ -1,15 +1,15 @@
 {
   "name": "homie-sdk",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description SDK for managing devices and their states, it is based on extended protocol [homieiot](https://homieiot.github.io/specification/).",
   "main": "lib/index.js",
   "scripts": {
     "test:lint": "eslint lib tests --ext js",
     "test": "jest --runInBand --forceExit",
     "test:coverage": "npm run test -- --coverage"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "2smart",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "dependencies": {
     "@taoqf/react-native-mqtt": "^3.0.4",
     "babel-eslint": "8.2.2",
@@ -55,5 +55,20 @@
       "<rootDir>/test.js",
       "<rootDir>/lib/Bridge/examples/"
     ]
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2SmartCloud/2smart-standalone-homie-sdk.git"
+  },
+  "keywords": [
+    "homie"
+  ],
+  "bugs": {
+    "url": "https://github.com/2SmartCloud/2smart-standalone-homie-sdk/issues"
+  },
+  "homepage": "https://github.com/2SmartCloud/2smart-standalone-homie-sdk#readme"
 }
