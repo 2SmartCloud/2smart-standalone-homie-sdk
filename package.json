@@ -29,7 +29,8 @@
     "lodash": "^4.17.20",
     "mqtt": "3.0.0",
     "mqtt-packet": "6.2.1",
-    "nanoid": "^2.1.9"
+    "nanoid": "^2.1.9",
+    "throttle-debounce": "^5.0.0"
   },
   "devDependencies": {
     "eslint-plugin-jest": "^22.15.1",
