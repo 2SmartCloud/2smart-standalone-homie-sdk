@@ -1,9 +1,8 @@
 # Homie SDK
+SDK for managing devices and their states, it is based on extended protocol [homieiot](https://homieiot.github.io/specification/spec-core-v3_0_1).
+The main idea was taken from Homie iot convention and contains extented features that are used in [2Smart products](https://2smart.com).
 
-## Description
-SDK for managing devices and their states, it is based on extended protocol [homieiot](https://homieiot.github.io/specification/).
-
-## Extension of the protocol
+## Extended features
 
 1.  The device has a group of attributes `$options`, which in format repeats the `$properties` from the node. Used to store device settings, both editable and not. Example: `sweet-home/device/$options/some-option`.
 2.  The device has a group of attributes `$telemetry`, which in format repeats the `$properties` from the node. Used to store various telemetry and statistics. `$stats` is not used. Example: `sweet-home/device/$telemetry/some-telemetry`.
@@ -11,8 +10,12 @@ SDK for managing devices and their states, it is based on extended protocol [hom
 4.  The node has a group of attributes `$options`, similar to the device. Example: `sweet-home/device/node/$options/some-option`.
 5.  The node has a group of attributes `$telemetry`, similar to the device. Example: `sweet-home/device/node/$telemetry/some-telemetry`.
 6.  A mechanism for validating the set values has been added to the application:
-    *  On the received message, in case of incorrect values, the error body should be sent to a topic like `errors/sweet-home/device/node...` The error body should be in the JSON format of the string "{" code ": 'error_code'," message ": 'error message'}". (For example, if an incorrect value has come to the topic `sweet-home/device/node/sensor/set`, then the error should be sent to the topic `errors/sweet-home/device/node/sensor`)
-     *  Valid for any editable values (`$properties`,`$options`, `$telemetry`).
+    *  On the received message, in case of incorrect values, the error body should be sent to a topic like `errors/sweet-home/device/node...` The error body should be in the JSON format of the string
+     ```
+     { "code" : "<error_code>", "message": "<error message>" }
+     ```
+     For example, if an incorrect value has come to the topic `sweet-home/device/node/sensor/set`, then the error should be sent to the topic `errors/sweet-home/device/node/sensor`
+     *  Valid for any editable values (`$properties`, `$options`, `$telemetry`).
 
 7.  Device and node indicators are taken from the following attributes:
      *  Status (state) - `$state`.

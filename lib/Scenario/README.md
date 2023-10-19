@@ -1,5 +1,8 @@
 # Scenario
 
+This instance is a part of 2Smart Standalone platform.
+Used to control scenario's properties (which is called "threshold" within a platform).
+
 ## API
 
 **Scenario(options)**
@@ -216,8 +219,6 @@ Returns `true` if each scenarios attribute is empty and otherwise
 **Scenario.delete()**
 
 Deletes scenario (clears all data and deletes handlers)
-
-***
 
 ***
 
