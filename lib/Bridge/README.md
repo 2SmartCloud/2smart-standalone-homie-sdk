@@ -14,7 +14,6 @@
 </br>
 
 # BaseBridge
-*Клас который является контейнером для всего что нужно бриджу.*
 ### `new BaseBridge(config)`
 * `config`
     * `homie` : instance of [Homie](../homie/Homie/README.md)
