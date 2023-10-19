@@ -1,5 +1,8 @@
 # Entity
 
+This instance is a part of 2Smart Standalone platform.
+The list of 2Smart Standalone entities is described in [entities_scheme.js](../etc/entities_scheme.js) file.
+
 **Entity.validateId(id)**
 
 - id: check id for validity. `String`

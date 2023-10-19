@@ -1,5 +1,7 @@
 # Node
 
+Homie node instance.
+
 ## API
 
 **Node(options)**

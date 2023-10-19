@@ -4,6 +4,7 @@
 
 - Homie(options)
 - Homie.init(deviceId = null, topicsToSubscribe = ['#'], options = {})
+- Homie.initCloudInstance()
 - Homie.attach(device)
 - Homie.attachThreshold(threshold)
 - Homie.attachScenario(scenario)
@@ -38,7 +39,7 @@
 
 **Homie(options)**
 
-Create Homie instance
+Create Homie instance.
 
 - options:
     - transport: Transport instance. One of [Broker](../../Broker)
@@ -61,6 +62,12 @@ Create device instances from broker state. If `deviceId` specified, only this de
     - subscribeToBridgeTopics: Whether to subscribe to device bridge topics, only works when `deviceId` is specified `Boolean`. Default: `false`
 
 Returns: `Promise<undefined>`
+
+***
+
+**Homie.initCloudInstance()**
+
+Used in [HomieCloud](../HomieCloud/README.md) instance to initialize Homie instance for a specific user.
 
 ***
 

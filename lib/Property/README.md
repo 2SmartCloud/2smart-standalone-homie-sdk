@@ -1,4 +1,7 @@
 # Property
+
+Homie sensor instance.
+
 ## API
 
 **Property(options)**
