@@ -101,6 +101,38 @@ describe('Property class', () => {
         expect(err.fields).toEqual({ format: 'WRONG_FORMAT', value: 'WRONG_TYPE' });
     });
 
+    test('POSITIVE: valid float/integer data type format 1', async () => {
+        const invalidFormat = {
+            ...mockedProperty,
+            dataType : 'integer',
+            format   : '-10:10',
+            value    : '-5'
+        };
+
+        const property = new Property({ id: invalidFormat.id });
+
+        property.updateAttribute(invalidFormat);
+        property.validateMyStructure();
+
+        expect(property.getValue()).toBe('-5');
+    });
+
+    test('POSITIVE: valid float/integer data type format 2', async () => {
+        const invalidFormat = {
+            ...mockedProperty,
+            dataType : 'integer',
+            format   : '-10:-2',
+            value    : '-5'
+        };
+
+        const property = new Property({ id: invalidFormat.id });
+
+        property.updateAttribute(invalidFormat);
+        property.validateMyStructure();
+
+        expect(property.getValue()).toBe('-5');
+    });
+
     test('NEGATIVE: invalid boolean data type value', async () => {
         const invalidValue = {
             ...mockedProperty,
