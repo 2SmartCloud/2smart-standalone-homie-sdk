@@ -36,6 +36,7 @@
     "jest": "24.8.0"
   },
   "jest": {
+    "testEnvironment": "node",
     "collectCoverageFrom": [
       "**/lib/**/*.js",
       "!**/lib/Bridge/examples/*",
