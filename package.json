@@ -27,7 +27,7 @@
     "livr": "2.2.5",
     "livr-extra-rules": "1.2.1",
     "lodash": "^4.17.20",
-    "mqtt": "git+https://gitlab+deploy-token-12:gldt-QiERBC57yqAzzR2gxcWe@gitlab.iot.webbylab.com/2smart/forks/mqtt.js.git#mqtt-fork",
+    "mqtt": "git+https://gitlab+deploy-token-12:gldt-QiERBC57yqAzzR2gxcWe@gitlab.iot.webbylab.com/2smart/forks/mqtt.js.git",
     "nanoid": "^2.1.9",
     "throttle-debounce": "^5.0.0"
   },
